@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Anthony&#39;s Blog">
 <meta property="og:description" content="1.变量和简单的数据类型2.列表列表增删改123456789增L.append()	#将元素附加到列表末尾L.insert() #元素的索引和值,L.insert(0,&amp;apos;a&amp;apos;)删del L[] #元素的索引L.pop()	#元素的索引L.remove() #元素的值改L[]=&amp;apos;&amp;apos; #元素的索引和新元素的值,例: L[0]=&amp;apos;a&amp;apos; 组织列表">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-11T12:51:36.453Z">
+<meta property="og:updated_time" content="2019-03-16T10:53:10.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python从入门到精通">
 <meta name="twitter:description" content="1.变量和简单的数据类型2.列表列表增删改123456789增L.append()	#将元素附加到列表末尾L.insert() #元素的索引和值,L.insert(0,&amp;apos;a&amp;apos;)删del L[] #元素的索引L.pop()	#元素的索引L.remove() #元素的值改L[]=&amp;apos;&amp;apos; #元素的索引和新元素的值,例: L[0]=&amp;apos;a&amp;apos; 组织列表">
@@ -333,12 +333,24 @@
                 
               
 
-              <time title="创建时间：2019-03-11 18:13:49 / 修改时间：20:51:36" itemprop="dateCreated datePublished" datetime="2019-03-11T18:13:49+08:00">2019-03-11</time>
+              <time title="创建时间：2019-03-11 18:13:49" itemprop="dateCreated datePublished" datetime="2019-03-11T18:13:49+08:00">2019-03-11</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-16 18:53:10" itemprop="dateModified" datetime="2019-03-16T18:53:10+08:00">2019-03-16</time>
               
             
           </span>
@@ -373,10 +385,18 @@
 
       
         <h1 id="1-变量和简单的数据类型"><a href="#1-变量和简单的数据类型" class="headerlink" title="1.变量和简单的数据类型"></a>1.变量和简单的数据类型</h1><h1 id="2-列表"><a href="#2-列表" class="headerlink" title="2.列表"></a>2.列表</h1><h2 id="列表增删改"><a href="#列表增删改" class="headerlink" title="列表增删改"></a>列表增删改</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">增</span><br><span class="line">L.append()	#将元素附加到列表末尾</span><br><span class="line">L.insert() #元素的索引和值,L.insert(0,&apos;a&apos;)</span><br><span class="line">删</span><br><span class="line">del L[] #元素的索引</span><br><span class="line">L.pop()	#元素的索引</span><br><span class="line">L.remove() #元素的值</span><br><span class="line">改</span><br><span class="line">L[]=&apos;&apos; #元素的索引和新元素的值,例: L[0]=&apos;a&apos;</span><br></pre></td></tr></table></figure>
-<h2 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h2><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">排序</span><br><span class="line">L.sort() #方法,字母顺序排序,永久性</span><br><span class="line">L.sort(reverse=True) #向sort()方法传递参数,字母反顺序排序,永久性</span><br><span class="line">sorted(L) #函数,临时字母顺序排序,不改变原列表,可以传递参数进行倒序.</span><br><span class="line"></span><br><span class="line">反转列表元素的排列顺序</span><br><span class="line">L.reverse() #方法,倒序,永久性</span><br></pre></td></tr></table></figure>
+<h2 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">排序</span><br><span class="line">L.sort() #方法,字母顺序排序,永久性</span><br><span class="line">L.sort(reverse=True) #向sort()方法传递参数,字母反顺序排序,永久性</span><br><span class="line">sorted(L) #函数,临时字母顺序排序,不改变原列表,可以传递参数进行倒序.</span><br><span class="line"></span><br><span class="line">反转列表元素的排列顺序</span><br><span class="line">L.reverse() #方法,倒序,永久性</span><br></pre></td></tr></table></figure>
 <h2 id="列表的长度"><a href="#列表的长度" class="headerlink" title="列表的长度"></a>列表的长度</h2><p><code>len(L)</code></p>
-<h1 id="3-操作列表"><a href="#3-操作列表" class="headerlink" title="3.操作列表"></a>3.操作列表</h1><h1 id="4-if-语句"><a href="#4-if-语句" class="headerlink" title="4.if 语句"></a>4.if 语句</h1><h1 id="5-字典"><a href="#5-字典" class="headerlink" title="5.字典"></a>5.字典</h1><h1 id="6-用户输入和while循环"><a href="#6-用户输入和while循环" class="headerlink" title="6.用户输入和while循环"></a>6.用户输入和while循环</h1><h1 id="7-函数"><a href="#7-函数" class="headerlink" title="7.函数"></a>7.函数</h1><h1 id="8-类"><a href="#8-类" class="headerlink" title="8.类"></a>8.类</h1><h1 id="9-文件和异常"><a href="#9-文件和异常" class="headerlink" title="9.文件和异常"></a>9.文件和异常</h1><h1 id="10-测试代码"><a href="#10-测试代码" class="headerlink" title="10.测试代码"></a>10.测试代码</h1><h1 id="11-项目"><a href="#11-项目" class="headerlink" title="11.项目"></a>11.项目</h1><h2 id="1-外星人入侵"><a href="#1-外星人入侵" class="headerlink" title="1.外星人入侵"></a>1.外星人入侵</h2><h2 id="2-数据可视化"><a href="#2-数据可视化" class="headerlink" title="2.数据可视化"></a>2.数据可视化</h2><h2 id="3-Web应用程序"><a href="#3-Web应用程序" class="headerlink" title="3.Web应用程序"></a>3.Web应用程序</h2>
+<h1 id="3-操作列表"><a href="#3-操作列表" class="headerlink" title="3.操作列表"></a>3.操作列表</h1><h2 id="切片理解"><a href="#切片理解" class="headerlink" title="切片理解"></a>切片理解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a=[0,1,2,3,4,5,6,7,8,9]</span><br><span class="line">切片操作 b=[i:j:s] (s:steps 步长)</span><br><span class="line">i: 表示起始元素对象，正索引位置默认为0；负索引位置默认为 -len(a).</span><br><span class="line">j: 表示是结束元素对象，正索引位置默认为 len(con)-1；负索引位置默认为-1.</span><br><span class="line">s: 表示取值的步长，默认为1，步长值不能为0.</span><br><span class="line">索引和步长都具有正负两个值，分别表示左右两个方向取值。</span><br><span class="line">索引的正方向从左往右取值，起始位置为0；负方向从右往左取值，起始位置为-1.</span><br><span class="line">任意一个序列结构数据的索引范围为-len(con)到len(con)-1范围内的连续整数.</span><br></pre></td></tr></table></figure>
+<p>##元组<br>Python将不能修改的值称为不可变的，而不可变的列表被称为元组。</p>
+<h2 id="PEP8-格式设置指南"><a href="#PEP8-格式设置指南" class="headerlink" title="PEP8 格式设置指南"></a>PEP8 格式设置指南</h2><p>(<a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">https://www.python.org/dev/peps/pep-0008/</a>)</p>
+<h1 id="4-if-语句"><a href="#4-if-语句" class="headerlink" title="4.if 语句"></a>4.if 语句</h1><h2 id="条件测试"><a href="#条件测试" class="headerlink" title="条件测试"></a>条件测试</h2><p>每条if语句的核心都是一个值为True或False的表达式,这种表达式被称为条件测试.<br>Python并不要求if-elif结构后面必须有else代码块.在有些情况下,else代码块很有用；而<br>在其他一些情况下,使用一条elif语句来处理特定的情形更清晰</p>
+<h1 id="5-字典"><a href="#5-字典" class="headerlink" title="5.字典"></a>5.字典</h1><h2 id="字典是一系列键—值对"><a href="#字典是一系列键—值对" class="headerlink" title="字典是一系列键—值对."></a>字典是一系列键—值对.</h2><p>每个键都与一个值相关联，你可以使用键来访问与之相关联的值.<br>删除 key-value<br>del :指定字典名字(dict)和删除的键(key).<br>del dict[key]</p>
+<h2 id="遍历字典时，会默认遍历所有的键"><a href="#遍历字典时，会默认遍历所有的键" class="headerlink" title="遍历字典时，会默认遍历所有的键."></a>遍历字典时，会默认遍历所有的键.</h2><p>for i in dict.keys():<br>可以省略keys()方法,for i in dict: </p>
+<h2 id="提取字典中所有的值"><a href="#提取字典中所有的值" class="headerlink" title="提取字典中所有的值"></a>提取字典中所有的值</h2><p>为剔除重复项，可使用集合（set）.集合类似于列表，但每个元素都必须是独一无二的:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for value in set(dict.values()):</span><br><span class="line">	print(value)</span><br></pre></td></tr></table></figure></p>
+<p>## </p>
+<h1 id="6-用户输入和while循环"><a href="#6-用户输入和while循环" class="headerlink" title="6.用户输入和while循环"></a>6.用户输入和while循环</h1><h1 id="7-函数"><a href="#7-函数" class="headerlink" title="7.函数"></a>7.函数</h1><h1 id="8-类"><a href="#8-类" class="headerlink" title="8.类"></a>8.类</h1><p># </p>
+
       
     </div>
 
@@ -572,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-变量和简单的数据类型"><span class="nav-number">1.</span> <span class="nav-text">1.变量和简单的数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-列表"><span class="nav-number">2.</span> <span class="nav-text">2.列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#列表增删改"><span class="nav-number">2.1.</span> <span class="nav-text">列表增删改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组织列表"><span class="nav-number">2.2.</span> <span class="nav-text">组织列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表的长度"><span class="nav-number">2.3.</span> <span class="nav-text">列表的长度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-操作列表"><span class="nav-number">3.</span> <span class="nav-text">3.操作列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-if-语句"><span class="nav-number">4.</span> <span class="nav-text">4.if 语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-字典"><span class="nav-number">5.</span> <span class="nav-text">5.字典</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-用户输入和while循环"><span class="nav-number">6.</span> <span class="nav-text">6.用户输入和while循环</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-函数"><span class="nav-number">7.</span> <span class="nav-text">7.函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-类"><span class="nav-number">8.</span> <span class="nav-text">8.类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-文件和异常"><span class="nav-number">9.</span> <span class="nav-text">9.文件和异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-测试代码"><span class="nav-number">10.</span> <span class="nav-text">10.测试代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#11-项目"><span class="nav-number">11.</span> <span class="nav-text">11.项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-外星人入侵"><span class="nav-number">11.1.</span> <span class="nav-text">1.外星人入侵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-数据可视化"><span class="nav-number">11.2.</span> <span class="nav-text">2.数据可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Web应用程序"><span class="nav-number">11.3.</span> <span class="nav-text">3.Web应用程序</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-变量和简单的数据类型"><span class="nav-number">1.</span> <span class="nav-text">1.变量和简单的数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-列表"><span class="nav-number">2.</span> <span class="nav-text">2.列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#列表增删改"><span class="nav-number">2.1.</span> <span class="nav-text">列表增删改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组织列表"><span class="nav-number">2.2.</span> <span class="nav-text">组织列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表的长度"><span class="nav-number">2.3.</span> <span class="nav-text">列表的长度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-操作列表"><span class="nav-number">3.</span> <span class="nav-text">3.操作列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#切片理解"><span class="nav-number">3.1.</span> <span class="nav-text">切片理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PEP8-格式设置指南"><span class="nav-number">3.2.</span> <span class="nav-text">PEP8 格式设置指南</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-if-语句"><span class="nav-number">4.</span> <span class="nav-text">4.if 语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#条件测试"><span class="nav-number">4.1.</span> <span class="nav-text">条件测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-字典"><span class="nav-number">5.</span> <span class="nav-text">5.字典</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字典是一系列键—值对"><span class="nav-number">5.1.</span> <span class="nav-text">字典是一系列键—值对.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遍历字典时，会默认遍历所有的键"><span class="nav-number">5.2.</span> <span class="nav-text">遍历字典时，会默认遍历所有的键.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提取字典中所有的值"><span class="nav-number">5.3.</span> <span class="nav-text">提取字典中所有的值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-用户输入和while循环"><span class="nav-number">6.</span> <span class="nav-text">6.用户输入和while循环</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-函数"><span class="nav-number">7.</span> <span class="nav-text">7.函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-类"><span class="nav-number">8.</span> <span class="nav-text">8.类</span></a></li></ol></div>
             
 
           </div>
@@ -619,7 +639,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3.4k字</span>
+  <span class="post-count">博客全站共3.8k字</span>
 </div>
         
 
