@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Anthony&#39;s Blog">
 <meta property="og:description" content="1.变量和简单的数据类型2.列表列表增删改123456789增L.append()	#将元素附加到列表末尾L.insert() #元素的索引和值,L.insert(0,&amp;apos;a&amp;apos;)删del L[] #元素的索引L.pop()	#元素的索引L.remove() #元素的值改L[]=&amp;apos;&amp;apos; #元素的索引和新元素的值,例: L[0]=&amp;apos;a&amp;apos; 组织列表">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-16T10:53:10.112Z">
+<meta property="og:updated_time" content="2019-03-25T12:58:54.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python从入门到精通">
 <meta name="twitter:description" content="1.变量和简单的数据类型2.列表列表增删改123456789增L.append()	#将元素附加到列表末尾L.insert() #元素的索引和值,L.insert(0,&amp;apos;a&amp;apos;)删del L[] #元素的索引L.pop()	#元素的索引L.remove() #元素的值改L[]=&amp;apos;&amp;apos; #元素的索引和新元素的值,例: L[0]=&amp;apos;a&amp;apos; 组织列表">
@@ -350,7 +350,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-16 18:53:10" itemprop="dateModified" datetime="2019-03-16T18:53:10+08:00">2019-03-16</time>
+                <time title="修改时间：2019-03-25 20:58:54" itemprop="dateModified" datetime="2019-03-25T20:58:54+08:00">2019-03-25</time>
               
             
           </span>
@@ -386,7 +386,7 @@
       
         <h1 id="1-变量和简单的数据类型"><a href="#1-变量和简单的数据类型" class="headerlink" title="1.变量和简单的数据类型"></a>1.变量和简单的数据类型</h1><h1 id="2-列表"><a href="#2-列表" class="headerlink" title="2.列表"></a>2.列表</h1><h2 id="列表增删改"><a href="#列表增删改" class="headerlink" title="列表增删改"></a>列表增删改</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">增</span><br><span class="line">L.append()	#将元素附加到列表末尾</span><br><span class="line">L.insert() #元素的索引和值,L.insert(0,&apos;a&apos;)</span><br><span class="line">删</span><br><span class="line">del L[] #元素的索引</span><br><span class="line">L.pop()	#元素的索引</span><br><span class="line">L.remove() #元素的值</span><br><span class="line">改</span><br><span class="line">L[]=&apos;&apos; #元素的索引和新元素的值,例: L[0]=&apos;a&apos;</span><br></pre></td></tr></table></figure>
 <h2 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">排序</span><br><span class="line">L.sort() #方法,字母顺序排序,永久性</span><br><span class="line">L.sort(reverse=True) #向sort()方法传递参数,字母反顺序排序,永久性</span><br><span class="line">sorted(L) #函数,临时字母顺序排序,不改变原列表,可以传递参数进行倒序.</span><br><span class="line"></span><br><span class="line">反转列表元素的排列顺序</span><br><span class="line">L.reverse() #方法,倒序,永久性</span><br></pre></td></tr></table></figure>
-<h2 id="列表的长度"><a href="#列表的长度" class="headerlink" title="列表的长度"></a>列表的长度</h2><p><code>len(L)</code></p>
+<h2 id="列表的长度"><a href="#列表的长度" class="headerlink" title="列表的长度"></a>列表的长度</h2><p><code>len(L)</code><br><a id="more"></a></p>
 <h1 id="3-操作列表"><a href="#3-操作列表" class="headerlink" title="3.操作列表"></a>3.操作列表</h1><h2 id="切片理解"><a href="#切片理解" class="headerlink" title="切片理解"></a>切片理解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a=[0,1,2,3,4,5,6,7,8,9]</span><br><span class="line">切片操作 b=[i:j:s] (s:steps 步长)</span><br><span class="line">i: 表示起始元素对象，正索引位置默认为0；负索引位置默认为 -len(a).</span><br><span class="line">j: 表示是结束元素对象，正索引位置默认为 len(con)-1；负索引位置默认为-1.</span><br><span class="line">s: 表示取值的步长，默认为1，步长值不能为0.</span><br><span class="line">索引和步长都具有正负两个值，分别表示左右两个方向取值。</span><br><span class="line">索引的正方向从左往右取值，起始位置为0；负方向从右往左取值，起始位置为-1.</span><br><span class="line">任意一个序列结构数据的索引范围为-len(con)到len(con)-1范围内的连续整数.</span><br></pre></td></tr></table></figure>
 <p>##元组<br>Python将不能修改的值称为不可变的，而不可变的列表被称为元组。</p>
 <h2 id="PEP8-格式设置指南"><a href="#PEP8-格式设置指南" class="headerlink" title="PEP8 格式设置指南"></a>PEP8 格式设置指南</h2><p>(<a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">https://www.python.org/dev/peps/pep-0008/</a>)</p>
@@ -432,8 +432,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/04/Markdown基本语法/" rel="next" title="Markdown基本语法">
-                <i class="fa fa-chevron-left"></i> Markdown基本语法
+              <a href="/2019/03/11/资源整理/" rel="next" title="Python从入门到精通">
+                <i class="fa fa-chevron-left"></i> Python从入门到精通
               </a>
             
           </div>
@@ -441,10 +441,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/11/资源整理/" rel="prev" title="Python从入门到精通">
-                Python从入门到精通 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
