@@ -337,6 +337,345 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/pycache-文件夹的产生与作用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Anthony">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://raw.github.com/anthonynasa/ImageHosting/master/PicsForBlogs/Earth.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Anthony's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/16/pycache-文件夹的产生与作用/" class="post-title-link" itemprop="url">__pycache__文件夹的产生与作用</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-16 18:44:54 / 修改时间：18:49:33" itemprop="dateCreated datePublished" datetime="2019-05-16T18:44:54+08:00">2019-05-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="pycache文件夹的产生与作用"><a href="#pycache文件夹的产生与作用" class="headerlink" title="pycache文件夹的产生与作用"></a><strong>pycache</strong>文件夹的产生与作用</h1><h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><p>先大概了解一下python基本运行机制。Python程序运行时不需要编译成二进制代码，而直接从源码运行程序，简单来说是，Python解释器将源码转换为字节码，然后再由解释器来执行这些字节码。</p>
+<p>解释器的具体工作：<br>1、完成模块的加载和链接；<br>2、将源代码编译为PyCodeObject对象(即字节码)，写入内存中，供CPU读取；<br>3、从内存中读取并执行，结束后将PyCodeObject写回硬盘当中，也就是复制到.pyc或.pyo文件中，以保存当前目录下所有脚本的字节码文件。</p>
+<p>之后若再次执行该脚本，它先检查【本地是否有上述字节码文件】和【该字节码文件的修改时间是否在其源文件之后】，是就直接执行，否则重复上述步骤。</p>
+<p>那有的小伙伴就有疑问了，<strong>pycache</strong>文件夹的意义何在呢？<br>因为第一次执行代码的时候，Python解释器已经把编译的字节码放在<strong>pycache</strong>文件夹中，这样以后再次运行的话，如果被调用的模块未发生改变，那就直接跳过编译这一步，直接去<strong>pycache</strong>文件夹中去运行相关的 *.pyc 文件，大大缩短了项目运行前的准备时间。<br>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/16/pycache-文件夹的产生与作用/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </p></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/Django入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Anthony">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://raw.github.com/anthonynasa/ImageHosting/master/PicsForBlogs/Earth.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Anthony's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/16/Django入门/" class="post-title-link" itemprop="url">Django入门</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-16 18:39:32 / 修改时间：18:42:46" itemprop="dateCreated datePublished" datetime="2019-05-16T18:39:32+08:00">2019-05-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python-Django/" itemprop="url" rel="index"><span itemprop="name">Python,Django</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>目标:自己动手创建简单的Web 应用程序，并能够深入学习其他有关如何使用Django 开发应用程序的资料.</p>
+<h2 id="1-Django入门"><a href="#1-Django入门" class="headerlink" title="1.Django入门"></a>1.Django入门</h2><p><em>开发一个名为“学习笔记”（Learning Log）的项目，这是一个在线日志系统</em><br>Django是一个Web框架–一套用于帮助开发交互式网站的工具.</p>
+<p>我们要编写一个名为“学习笔记”的Web应用程序，<br>让用户能够记录感兴趣的主题，并在学习每个主题的过程中添加日志条目。<br>“学习笔记”的主页对这个网站进行描述，并邀请用户注册或登录。<br>用户登录后，就可创建新主题、添加新条目以及阅读既有的条目。<br>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/16/Django入门/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </p></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/project-grades/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -566,7 +905,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-14 18:30:28" itemprop="dateModified" datetime="2019-05-14T18:30:28+08:00">2019-05-14</time>
+                <time title="修改时间：2019-05-16 18:43:04" itemprop="dateModified" datetime="2019-05-16T18:43:04+08:00">2019-05-16</time>
               
             
           </span>
@@ -1442,7 +1781,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1467,7 +1806,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1582,7 +1923,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共11.9k字</span>
+  <span class="post-count">博客全站共15.4k字</span>
 </div>
         
 

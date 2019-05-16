@@ -96,20 +96,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Anthony&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/测试-说明-blog/index.html">
+  <meta name="description" content="pycache文件夹的产生与作用简单说明先大概了解一下python基本运行机制。Python程序运行时不需要编译成二进制代码，而直接从源码运行程序，简单来说是，Python解释器将源码转换为字节码，然后再由解释器来执行这些字节码。 解释器的具体工作：1、完成模块的加载和链接；2、将源代码编译为PyCodeObject对象(即字节码)，写入内存中，供CPU读取；3、从内存中读取并执行，结束后将PyC">
+<meta name="keywords" content="python3,教程,整理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="__pycache__文件夹的产生与作用">
+<meta property="og:url" content="http://yoursite.com/2019/05/16/pycache-文件夹的产生与作用/index.html">
 <meta property="og:site_name" content="Anthony&#39;s Blog">
+<meta property="og:description" content="pycache文件夹的产生与作用简单说明先大概了解一下python基本运行机制。Python程序运行时不需要编译成二进制代码，而直接从源码运行程序，简单来说是，Python解释器将源码转换为字节码，然后再由解释器来执行这些字节码。 解释器的具体工作：1、完成模块的加载和链接；2、将源代码编译为PyCodeObject对象(即字节码)，写入内存中，供CPU读取；3、从内存中读取并执行，结束后将PyC">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-16T10:49:33.763Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Anthony&#39;s Blog">
+<meta name="twitter:title" content="__pycache__文件夹的产生与作用">
+<meta name="twitter:description" content="pycache文件夹的产生与作用简单说明先大概了解一下python基本运行机制。Python程序运行时不需要编译成二进制代码，而直接从源码运行程序，简单来说是，Python解释器将源码转换为字节码，然后再由解释器来执行这些字节码。 解释器的具体工作：1、完成模块的加载和链接；2、将源代码编译为PyCodeObject对象(即字节码)，写入内存中，供CPU读取；3、从内存中读取并执行，结束后将PyC">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/测试-说明-blog/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/16/pycache-文件夹的产生与作用/">
 
 
 
@@ -119,7 +124,7 @@
   };
 </script>
 
-  <title>标签: 测试,说明,blog | Anthony's Blog</title>
+  <title>__pycache__文件夹的产生与作用 | Anthony's Blog</title>
   
 
 
@@ -167,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/anthonynasa/anthonynasa.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -240,7 +245,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -316,82 +321,199 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>测试,说明,blog<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/pycache-文件夹的产生与作用/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Anthony">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://raw.github.com/anthonynasa/ImageHosting/master/PicsForBlogs/Earth.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Anthony's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/03/02/Hello-Hexo/" itemprop="url">
-            
-              <span itemprop="name">Hello,Hexo!</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">__pycache__文件夹的产生与作用
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-02T14:35:35+08:00" content="2019-03-02">
-          03-02
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-16 18:44:54 / 修改时间：18:49:33" itemprop="dateCreated datePublished" datetime="2019-05-16T18:44:54+08:00">2019-05-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="pycache文件夹的产生与作用"><a href="#pycache文件夹的产生与作用" class="headerlink" title="pycache文件夹的产生与作用"></a><strong>pycache</strong>文件夹的产生与作用</h1><h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><p>先大概了解一下python基本运行机制。Python程序运行时不需要编译成二进制代码，而直接从源码运行程序，简单来说是，Python解释器将源码转换为字节码，然后再由解释器来执行这些字节码。</p>
+<p>解释器的具体工作：<br>1、完成模块的加载和链接；<br>2、将源代码编译为PyCodeObject对象(即字节码)，写入内存中，供CPU读取；<br>3、从内存中读取并执行，结束后将PyCodeObject写回硬盘当中，也就是复制到.pyc或.pyo文件中，以保存当前目录下所有脚本的字节码文件。</p>
+<p>之后若再次执行该脚本，它先检查【本地是否有上述字节码文件】和【该字节码文件的修改时间是否在其源文件之后】，是就直接执行，否则重复上述步骤。</p>
+<p>那有的小伙伴就有疑问了，<strong>pycache</strong>文件夹的意义何在呢？<br>因为第一次执行代码的时候，Python解释器已经把编译的字节码放在<strong>pycache</strong>文件夹中，这样以后再次运行的话，如果被调用的模块未发生改变，那就直接跳过编译这一步，直接去<strong>pycache</strong>文件夹中去运行相关的 *.pyc 文件，大大缩短了项目运行前的准备时间。<br><a id="more"></a><br><a href="https://blog.csdn.net/yitiaodashu/article/details/79023987" target="_blank" rel="noopener">引用地址</a></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python3-教程-整理/" rel="tag"># python3,教程,整理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/16/Django入门/" rel="next" title="Django入门">
+                <i class="fa fa-chevron-left"></i> Django入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -411,8 +533,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -530,6 +661,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pycache文件夹的产生与作用"><span class="nav-number">1.</span> <span class="nav-text">pycache文件夹的产生与作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单说明"><span class="nav-number">1.1.</span> <span class="nav-text">简单说明</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -663,6 +811,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -673,6 +825,8 @@
   
   
 
+
+  
 
 
   
