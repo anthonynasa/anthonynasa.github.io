@@ -29,7 +29,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css?v=1.0.2">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
 
 
 
@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Anthony&#39;s Blog">
 <meta property="og:description" content="综述三个不同类型的项目，你可以选择完成其中的任何项目或全部项目，完成这些项目的顺序无关紧要. 1.外星人入侵：使用Python 开发游戏使用Pygame 包来开发一款2D 游戏 2.数据可视化使用matplotlib 和Pygal 来生成数据，以及根据这些数据创建实用而漂亮的图表。 从网上获取数据，并将它们提供给可视化包以创建天气图和世界人口地图。 编写自动下载数据并对其进行可视化的程序。 3.W">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-27T11:03:57.913Z">
+<meta property="og:updated_time" content="2019-05-27T12:14:56.565Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python从入门到精通--项目">
 <meta name="twitter:description" content="综述三个不同类型的项目，你可以选择完成其中的任何项目或全部项目，完成这些项目的顺序无关紧要. 1.外星人入侵：使用Python 开发游戏使用Pygame 包来开发一款2D 游戏 2.数据可视化使用matplotlib 和Pygal 来生成数据，以及根据这些数据创建实用而漂亮的图表。 从网上获取数据，并将它们提供给可视化包以创建天气图和世界人口地图。 编写自动下载数据并对其进行可视化的程序。 3.W">
@@ -443,7 +443,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-27 19:03:57" itemprop="dateModified" datetime="2019-05-27T19:03:57+08:00">2019-05-27</time>
+                <time title="修改时间：2019-05-27 20:14:56" itemprop="dateModified" datetime="2019-05-27T20:14:56+08:00">2019-05-27</time>
               
             
           </span>
@@ -581,7 +581,7 @@
 <hr>
 <h2 id="模型Entry"><a href="#模型Entry" class="headerlink" title="模型Entry"></a>模型Entry</h2><ol>
 <li><p>定义模型Entry<br>多对一关系，即多个条目可关联到同一个主题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Entry(models.Model):</span><br><span class="line">	&quot;&quot;&quot;学到的有关某个主题的具体知识&quot;&quot;&quot;</span><br><span class="line">	topic = models.ForeignKey(Topic)</span><br><span class="line"> 	text = models.TextField()</span><br><span class="line">	date_added = models.DateTimeField(auto_now_add=True)</span><br><span class="line"> 	class Meta:</span><br><span class="line">		verbose_name_plural = &apos;entries&apos;</span><br><span class="line">	def __str__(self):</span><br><span class="line">		&quot;&quot;&quot;返回模型的字符串表示&quot;&quot;&quot;</span><br><span class="line"> 		return self.text[:50] + &quot;...&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Entry(models.Model):</span><br><span class="line">	&quot;&quot;&quot;学到的有关某个主题的具体知识&quot;&quot;&quot;</span><br><span class="line">	topic = models.ForeignKey(Topic)</span><br><span class="line"> 	text = models.TextField()</span><br><span class="line">	date_added = models.DateTimeField(auto_now_add=True)</span><br><span class="line"> 	class Meta:</span><br><span class="line">		verbose_name_plural = &apos;entries&apos;</span><br><span class="line">	def __str__(self):</span><br><span class="line">		&quot;&quot;&quot;返回模型的字符串表示&quot;&quot;&quot;</span><br><span class="line"> 		return self.text[:50] + &quot;...&quot;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>迁移模型Entry<br><code>python manage.py makemigrations learning_logs</code><br><code>python manage.py migrate</code></p>
 </li>
