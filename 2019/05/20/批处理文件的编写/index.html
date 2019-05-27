@@ -24,6 +24,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css?v=1.0.2">
+
 
 
 
@@ -97,14 +104,14 @@
 
 
   <meta name="description" content="批处理文件的编写.批处理，顾名思义就是进行批量的处理.批处理文件是扩展名为·bat 或·cmd的文本文件，包含一条或多条命令,由DOS或Windows系统内嵌的命令解释器来解释运行.">
-<meta name="keywords" content="教程,整理">
+<meta name="keywords" content=".bat,教程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="批处理文件的编写">
 <meta property="og:url" content="http://yoursite.com/2019/05/20/批处理文件的编写/index.html">
 <meta property="og:site_name" content="Anthony&#39;s Blog">
 <meta property="og:description" content="批处理文件的编写.批处理，顾名思义就是进行批量的处理.批处理文件是扩展名为·bat 或·cmd的文本文件，包含一条或多条命令,由DOS或Windows系统内嵌的命令解释器来解释运行.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-20T11:37:35.333Z">
+<meta property="og:updated_time" content="2019-05-27T11:04:50.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="批处理文件的编写">
 <meta name="twitter:description" content="批处理文件的编写.批处理，顾名思义就是进行批量的处理.批处理文件是扩展名为·bat 或·cmd的文本文件，包含一条或多条命令,由DOS或Windows系统内嵌的命令解释器来解释运行.">
@@ -188,6 +195,10 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
+      
+        <p class="site-subtitle">Life is short，you need Python.</p>
+      
     
     
   </div>
@@ -376,7 +387,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anthony">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="Valar Morghulis.Valar Dohaeris.">
       <meta itemprop="image" content="https://raw.github.com/anthonynasa/ImageHosting/master/PicsForBlogs/Earth.gif">
     </span>
 
@@ -415,12 +426,24 @@
                 
               
 
-              <time title="创建时间：2019-05-20 19:31:28 / 修改时间：19:37:35" itemprop="dateCreated datePublished" datetime="2019-05-20T19:31:28+08:00">2019-05-20</time>
+              <time title="创建时间：2019-05-20 19:31:28" itemprop="dateCreated datePublished" datetime="2019-05-20T19:31:28+08:00">2019-05-20</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-27 19:04:50" itemprop="dateModified" datetime="2019-05-27T19:04:50+08:00">2019-05-27</time>
               
             
           </span>
@@ -481,21 +504,30 @@
       
         <h1 id="批处理文件的编写"><a href="#批处理文件的编写" class="headerlink" title="批处理文件的编写."></a>批处理文件的编写.</h1><p>批处理，顾名思义就是进行批量的处理.<br>批处理文件是扩展名为·bat 或·cmd的文本文件，包含一条或多条命令,由DOS或Windows系统内嵌的命令解释器来解释运行.<br><a id="more"></a></p>
 <ol>
-<li><p>.bat文件快速启动python的虚拟环境,以及Django服务.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">G:</span><br><span class="line">cd G:\Projects\learning_log\ll_env\Scripts &amp;&amp; activate &amp;&amp; cd G:\Projects\learning_log &amp;&amp; python manage.py runserver</span><br><span class="line">cmd /k</span><br></pre></td></tr></table></figure>
+<li>.bat文件快速启动python的虚拟环境,以及Django服务.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">G:</span><br><span class="line">cd G:\Projects\learning_log\ll_env\Scripts &amp;&amp; activate &amp;&amp; cd G:\Projects\learning_log &amp;&amp; python manage.py runserver</span><br><span class="line">cmd /k</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>批处理bat echo中文乱码完美解决方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">REM 声明采用UTF-8编码</span><br><span class="line">chcp 65001</span><br><span class="line">echo test</span><br><span class="line">echo 中文测试</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>.bat文件快速启动python的虚拟环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">G:</span><br><span class="line">cd G:\Projects\learning_log\ll_env\Scripts &amp;&amp; call activate.bat &amp;&amp; cd G:\Projects\learning_log</span><br><span class="line">cmd /k</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>.bat文件执行多个批处理文件(汇总执行),适用于开机启动多个程序<br>Start语法：<br>启动另一个窗口运行指定的程序或命令。<br>参数D 后面的参数表示被调用命令的所在目录.<br>start /d “路径” call filename.bat</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off </span><br><span class="line">start /d &quot;路径&quot; call filename.bat</span><br><span class="line">start /d &quot;路径&quot; call filename.bat</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>start /d “路径” .exe</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">REM 声明采用UTF-8编码</span><br><span class="line">chcp 65001</span><br><span class="line">REM start your program, if the path has space</span><br><span class="line">start /d &quot;D:\Program Files\Battle.net\&quot; Battle.net.exe</span><br><span class="line">start /d &quot;E:\Game application\HSA\&quot; HSAng.exe</span><br><span class="line">REM exit this cmd</span><br><span class="line">exit</span><br></pre></td></tr></table></figure></li>
 </ol>
+<hr>
+<ol start="2">
+<li>批处理bat echo中文乱码完美解决方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">REM 声明采用UTF-8编码</span><br><span class="line">chcp 65001</span><br><span class="line">echo test</span><br><span class="line">echo 中文测试</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>.bat文件快速启动python的虚拟环境<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">G:</span><br><span class="line">cd G:\Projects\learning_log\ll_env\Scripts &amp;&amp; call activate.bat &amp;&amp; cd G:\Projects\learning_log</span><br><span class="line">cmd /k</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<ol start="4">
+<li>.bat文件执行多个批处理文件(汇总执行),适用于开机启动多个程序<br>Start语法：<br>启动另一个窗口运行指定的程序或命令。<br>参数D 后面的参数表示被调用命令的所在目录.<br>start /d “路径” call filename.bat<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off </span><br><span class="line">start /d &quot;路径&quot; call filename.bat</span><br><span class="line">start /d &quot;路径&quot; call filename.bat</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<ol start="5">
+<li>start /d “路径” .exe<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">REM 声明采用UTF-8编码</span><br><span class="line">chcp 65001</span><br><span class="line">REM start your program, if the path has space</span><br><span class="line">start /d &quot;D:\Program Files\Battle.net\&quot; Battle.net.exe</span><br><span class="line">start /d &quot;E:\Game application\HSA\&quot; HSAng.exe</span><br><span class="line">REM exit this cmd</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
 
       
     </div>
@@ -519,7 +551,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/教程-整理/" rel="tag"><i class="fa fa-tag"></i> 教程,整理</a>
+            <a href="/tags/bat-教程/" rel="tag"><i class="fa fa-tag"></i> .bat,教程</a>
           
         </div>
       
@@ -606,7 +638,7 @@
               <img class="site-author-image" itemprop="image" src="https://raw.github.com/anthonynasa/ImageHosting/master/PicsForBlogs/Earth.gif" alt="Anthony">
             
               <p class="site-author-name" itemprop="name">Anthony</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Valar Morghulis.Valar Dohaeris.</p>
           </div>
 
           
