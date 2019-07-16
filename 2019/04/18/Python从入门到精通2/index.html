@@ -104,14 +104,14 @@
 
 
   <meta name="description" content="综述三个不同类型的项目，你可以选择完成其中的任何项目或全部项目，完成这些项目的顺序无关紧要. 1.外星人入侵：使用Python 开发游戏使用Pygame 包来开发一款2D 游戏 2.数据可视化使用matplotlib 和Pygal 来生成数据，以及根据这些数据创建实用而漂亮的图表。 从网上获取数据，并将它们提供给可视化包以创建天气图和世界人口地图。 编写自动下载数据并对其进行可视化的程序。 3.W">
-<meta name="keywords" content="python,教程">
+<meta name="keywords" content="python3,教程,整理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python从入门到精通--项目">
 <meta property="og:url" content="http://yoursite.com/2019/04/18/Python从入门到精通2/index.html">
 <meta property="og:site_name" content="Anthony&#39;s Blog">
 <meta property="og:description" content="综述三个不同类型的项目，你可以选择完成其中的任何项目或全部项目，完成这些项目的顺序无关紧要. 1.外星人入侵：使用Python 开发游戏使用Pygame 包来开发一款2D 游戏 2.数据可视化使用matplotlib 和Pygal 来生成数据，以及根据这些数据创建实用而漂亮的图表。 从网上获取数据，并将它们提供给可视化包以创建天气图和世界人口地图。 编写自动下载数据并对其进行可视化的程序。 3.W">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-27T12:17:28.911Z">
+<meta property="og:updated_time" content="2019-07-16T10:39:48.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python从入门到精通--项目">
 <meta name="twitter:description" content="综述三个不同类型的项目，你可以选择完成其中的任何项目或全部项目，完成这些项目的顺序无关紧要. 1.外星人入侵：使用Python 开发游戏使用Pygame 包来开发一款2D 游戏 2.数据可视化使用matplotlib 和Pygal 来生成数据，以及根据这些数据创建实用而漂亮的图表。 从网上获取数据，并将它们提供给可视化包以创建天气图和世界人口地图。 编写自动下载数据并对其进行可视化的程序。 3.W">
@@ -443,7 +443,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-27 20:17:28" itemprop="dateModified" datetime="2019-05-27T20:17:28+08:00">2019-05-27</time>
+                <time title="修改时间：2019-07-16 18:39:48" itemprop="dateModified" datetime="2019-07-16T18:39:48+08:00">2019-07-16</time>
               
             
           </span>
@@ -581,7 +581,7 @@
 <hr>
 <h2 id="模型Entry"><a href="#模型Entry" class="headerlink" title="模型Entry"></a>模型Entry</h2><ol>
 <li><p>定义模型Entry<br>多对一关系，即多个条目可关联到同一个主题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Entry(models.Model):</span><br><span class="line">	&quot;&quot;&quot;学到的有关某个主题的具体知识&quot;&quot;&quot;</span><br><span class="line">	topic = models.ForeignKey(Topic)</span><br><span class="line"> 	text = models.TextField()</span><br><span class="line">	date_added = models.DateTimeField(auto_now_add=True)</span><br><span class="line"> 	class Meta:</span><br><span class="line">		verbose_name_plural = &apos;entries&apos;</span><br><span class="line">	def __str__(self):</span><br><span class="line">		&quot;&quot;&quot;返回模型的字符串表示&quot;&quot;&quot;</span><br><span class="line"> 		return self.text[:50] + &quot;...&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Entry(models.Model):</span><br><span class="line">	&quot;&quot;&quot;学到的有关某个主题的具体知识&quot;&quot;&quot;</span><br><span class="line">	topic = models.ForeignKey(Topic)</span><br><span class="line"> 	text = models.TextField()</span><br><span class="line">	date_added = models.DateTimeField(auto_now_add=True)</span><br><span class="line"> 	class Meta:</span><br><span class="line">		verbose_name_plural = &apos;entries&apos;</span><br><span class="line">	def __str__(self):</span><br><span class="line">		&quot;&quot;&quot;返回模型的字符串表示&quot;&quot;&quot;</span><br><span class="line"> 		return self.text[:50] + &quot;...&quot;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>迁移模型Entry<br><code>python manage.py makemigrations learning_logs</code><br><code>python manage.py migrate</code></p>
 </li>
@@ -616,15 +616,142 @@
 <ol start="4">
 <li>模板继承<br>模板继承—-模板继承和类的继承含义是一样的，主要是为了提高代码重用，减轻开发人员的工作量。<br>典型应用：网站的头部、尾部信息。</li>
 </ol>
-<p><strong>父模板</strong><br>如果发现在多个模板中某些内容相同，那就应该把这段内容定义到父模板中。<br>标签block：用于在父模板中预留区域，留给子模板填充差异性的内容，名字不能相同。<br>为了更好的可读性，建议给endblock标签写上名字，这个名字与对应的block名字相同。<br>父模板中也可以使用上下文中传递过来的数据。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;%block 名称%&#125;</span><br><span class="line">预留区域，可以编写默认内容，也可以没有默认内容</span><br><span class="line">&#123;%endblock  名称%&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>子模板</strong><br>标签extends：继承，写在子模板文件的第一行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends &quot;父模板路径&quot;%&#125;</span><br></pre></td></tr></table></figure></p>
-<p>子模版不用填充父模版中的所有预留区域，如果子模版没有填充，则使用父模版定义的默认值。<br>填充父模板中指定名称的预留区域。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;%block 名称%&#125;</span><br><span class="line">实际填充内容</span><br><span class="line">&#123;&#123;block.super&#125;&#125;用于获取父模板中block的内容</span><br><span class="line">&#123;%endblock 名称%&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>父模板</strong><br>如果发现在多个模板中某些内容相同，那就应该把这段内容定义到父模板中。<br>标签block：用于在父模板中预留区域，留给子模板填充差异性的内容，名字不能相同。<br>为了更好的可读性，建议给endblock标签写上名字，这个名字与对应的block名字相同。<br>父模板中也可以使用上下文中传递过来的数据。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block 名称 %&#125;</span><br><span class="line">预留区域，可以编写默认内容，也可以没有默认内容</span><br><span class="line">&#123;% endblock  名称 %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>子模板</strong><br>标签extends：继承，写在子模板文件的第一行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends &quot;父模板路径&quot; %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>子模版不用填充父模版中的所有预留区域，如果子模版没有填充，则使用父模版定义的默认值。</strong><br><strong>填充父模板中<em>指定名称</em>的预留区域。</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block 名称 %&#125;</span><br><span class="line">实际填充内容</span><br><span class="line">&#123;&#123;block.super&#125;&#125;   #用于获取父模板中block的内容</span><br><span class="line">&#123;% endblock 名称 %&#125;</span><br></pre></td></tr></table></figure></p>
 <ol start="5">
-<li>访问设置.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.修改 Django项目中的settings.py中的 ALLOWED_HOSTS 的值为 [*]</span><br><span class="line"># 准许哪些地址访问，* 表示任意地址</span><br><span class="line">ALLOWED_HOSTS = [&apos;*&apos;]</span><br><span class="line"># ALLOWED_HOSTS = [&apos;192.168.1.49&apos;, &apos;localhost&apos;, &apos;127.0.0.1&apos;]</span><br><span class="line">2.使用命令启动服务：</span><br><span class="line">python manage.py runserver 0.0.0.0:8000  </span><br><span class="line">其他的电脑可通过访问启动服务的ip访问项目</span><br></pre></td></tr></table></figure>
+<li><p>显示所有主题的页面.<br>html标签说明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt; 无序列表。</span><br><span class="line">&lt;li&gt; 列表里的列。</span><br><span class="line"></span><br><span class="line">&lt;p&gt; 段落</span><br><span class="line">&lt;b&gt; 加粗</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示特定主题的页面<br>url模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">--snip--</span><br><span class="line">urlpatterns = [</span><br><span class="line">--snip--</span><br><span class="line"># 特定主题的详细页面</span><br><span class="line">url(&apos;&lt;topic_id&gt;&apos;, views.topic, name=&apos;topic&apos;),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模板注意项目.<br>模板中循环类似下面:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for item in list %&#125;</span><br><span class="line">    do something with each item</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>内网访问,需要服务器主机的ip,以及设置的端口.<br>外网访问,需要服务器路由映射,以及域名.<br>80端口需要到信息管理部门进行备份.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">公司域名:http://218.90.143.66</span><br><span class="line">http://www.cloudsense.cn</span><br></pre></td></tr></table></figure></p>
-<h2 id="熟悉下Win10下IIS配置、项目发布、添加网站-公司使用IIS发布"><a href="#熟悉下Win10下IIS配置、项目发布、添加网站-公司使用IIS发布" class="headerlink" title="熟悉下Win10下IIS配置、项目发布、添加网站(公司使用IIS发布)"></a><em>熟悉下Win10下IIS配置、项目发布、添加网站(公司使用IIS发布)</em></h2><hr>
+<p>要在模板中打印变量，需要将变量名用双花括号括起来.<br><code></code></p>
+<p>在Django模板中，竖线（|）表示模板过滤器——对模板变量的值进行修改的函数.<br><code>过滤器linebreaks(|linebreaks)包含换行符的长条目转换为浏览器能够理解的格式，以免显示为一个不间断的文本块。</code></p>
+<hr>
+<h2 id="Django小结"><a href="#Django小结" class="headerlink" title="Django小结"></a>Django小结</h2><ol>
+<li>使用Django框架来创建Web应用程序</li>
+<li>制定了简要的项目规范，在虚拟环境中安装了Django，创建了一个项目</li>
+<li>创建应用程序，以及如何定义表示应用程序数据的模型</li>
+<li>数据库，以及在你修改模型后，Django可为你迁移数据库提供什么样的帮助</li>
+<li>创建可访问管理网站的超级用户，并使用管理网站输入了一些初始数据</li>
+<li>定义URL、创建视图函数以及编写为网站创建网页的模板</li>
+<li>模板继承</li>
+</ol>
+<hr>
+<h2 id="用户账户"><a href="#用户账户" class="headerlink" title="用户账户"></a>用户账户</h2><ol>
+<li>内容<br>1.创建一些表单，让用户能够添加主题和条目，以及编辑既有的条目.<br>2.学习Django如何防范对基于表单的网页发起的常见攻击.<br>3.将实现一个用户身份验证系统.</li>
+<li>表单<br>让用户输入并提交信息的页面都是表单.<br>用户输入信息时，我们需要进行验证，确认提供的信息是正确的数据类型,然后对这些有效信息进行处理,将其保存到数据库合适的地方.<br>在Django中，创建表单的最简单方式是使用ModelForm.<br><em>小部件（widget）是一个HTML表单元素，如单行文本框、多行文本区域或下拉列表。通过设置属性widgets，可覆盖Django选择的默认小部件。</em></li>
+<li>URL模式</li>
+<li><p>视图函数<br>函数需要处理两种情形：<br>刚进入网页（在这种情况下，它应显示一个空表单）.<br>对提交的表单数据进行处理，并将用户重定向到网页topics.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">django2.0 把原来的 django.core.urlresolvers 包 更改为了 django.urls包</span><br><span class="line">导入 reverse : from django.urls import reverse</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>GET请求和POST请求<br>只是从服务器读取数据的页面，使用GET请求<br>用户需要通过表单提交信息时，通常使用POST请求<br>处理所有表单时，我们都将指定使用POST方法。</p>
+</li>
+<li><p>模板</p>
+<figure class="highlight plain"><figcaption><span>csrf_token %&#125;来防止攻击者利用表单来获得对服务器未经授权的访问（这种攻击被称为跨站请求伪造）.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">只需包含模板变量&#123;&#123; form.as_p &#125;&#125;，就可让Django自动创建显示表单所需的全部字段.</span><br><span class="line">修饰符as_p让Django以段落格式渲染所有表单元素，这是一种整洁地显示表单的简单方式.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>链接到页面</p>
+</li>
+</ol>
+<hr>
+<p>基本流程.</p>
+<h2 id="定义URL，编写视图函数和模板，链接到网页。"><a href="#定义URL，编写视图函数和模板，链接到网页。" class="headerlink" title="定义URL，编写视图函数和模板，链接到网页。"></a><code>定义URL，编写视图函数和模板，链接到网页。</code></h2><ol start="8">
+<li>创建用户账户.<br>建立一个用户注册和身份验证系统，让用户能够注册账户，进而登录和注销.<br>将创建一个新的应用程序，其中包含与处理用户账户相关的所有功能.<br>对模型Topic稍做修改，让每个主题都归属于特定用户.</li>
+<li>应用程序users<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ImportError: cannot import name &apos;login&apos; from &apos;django.contrib.auth.views&apos; </span><br><span class="line">解决方法:</span><br><span class="line">from django.contrib.auth.views import login</span><br><span class="line">from django.contrib.auth.views import logout</span><br><span class="line"># 修改为</span><br><span class="line">from django.contrib.auth import authenticate, login, logout</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Django2.0的内置登陆视图不再是函数，而是类，位置在django.contrib.auth.views.LoginView。<br>类视图有个as_view方法，这个方法来自父类，位置在django.views.generic.base.View.as_view。<br>template_name是类视图中的一个变量，默认值是’registration/login.html’，通过向as_view传入参数template_name=’account/login.html’可以修改这个变量值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from django.contrib.auth.views import LoginView</span><br><span class="line"> </span><br><span class="line"># LoginView.as_view后面要加上()</span><br><span class="line">path(&apos;login/&apos;, LoginView.as_view(template_name=&apos;account/login.html&apos;), name=&quot;user_login&quot;),</span><br></pre></td></tr></table></figure></p>
+<p>TemplateDoesNotExist的解决方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">django运行时报错，提示TemplateDoesNotExist，某个html文件不存在</span><br><span class="line">需要把项目模板所在目录的路径添加到这里，代码：</span><br><span class="line">&apos;DIRS&apos;: [os.path.join(BASE_DIR, &apos;myapp/Templates&apos;)],</span><br><span class="line">其中BASE_DIR指项目的db.sqlite3所在的目录，后面是模板目录相对db.sqlite3的路径</span><br></pre></td></tr></table></figure></p>
+<ol start="10">
+<li>登录,注销,注册<br>1.登录<br>使用Django提供的默认登录视图.<br>urls:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from . import views</span><br><span class="line">from django.urls import path</span><br><span class="line">from django.contrib.auth.views import LoginView, LogoutView</span><br><span class="line">app_name = &apos;users&apos;</span><br><span class="line">urlpatterns = [</span><br><span class="line">    # 登录界面</span><br><span class="line">    path(&apos;login/&apos;, LoginView.as_view(template_name=&apos;login.html&apos;), name=&apos;login&apos;),</span><br><span class="line">    path(&apos;logout/&apos;, LogoutView.as_view(), name=&apos;logout&apos;), ]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>模板login.html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends &quot;base.html&quot; %&#125;</span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">&#123;% if form.errors %&#125;</span><br><span class="line">&lt;p&gt;错误&lt;/p&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">&lt;form method=&quot;post&quot; action=&quot;&#123;% url &apos;users:login&apos; %&#125;&quot;&gt;</span><br><span class="line">    &#123;% csrf_token %&#125;</span><br><span class="line">    &#123;&#123; form.as_p &#125;&#125;</span><br><span class="line">    &lt;button name=&quot;submit&quot;&gt;登录&lt;/button&gt;</span><br><span class="line">    &lt;input type=&quot;hidden&quot; name=&quot;next&quot; value=&quot;&#123;% url &apos;learning_logs:main&apos; %&#125;&quot; /&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&#123;% endblock content %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>主页:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if user.is_authenticated %&#125;</span><br><span class="line">hello,&#123;&#123; user.username &#125;&#125;.</span><br><span class="line">&lt;a href=&quot;&#123;% url &apos;users:logout&apos; %&#125;&quot;&gt;注销&lt;/a&gt;</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">&lt;a href=&quot;&#123;% url &apos;users:login&apos; %&#125;&quot;&gt;&lt;button&gt;登录&lt;/button&gt;&lt;/a&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.注销<br>让用户只需单击一个链接就能注销并返回到主页。为此，我们将为注销链接定义一个URL模式，编写一个视图函数，并在base.html中添加一个注销链接。<br>3.注册<br>使用Django提供的表单UserCreationForm，但编写自己的视图函数和模板。</p>
+<ol start="11">
+<li>使用 装饰器 限制访问<br>Django提供了装饰器@login_required，让你能够轻松地实现这样的目标：对于某些页面，只允许已登录的用户访问它们。<br><strong>装饰器（decorator）是放在函数定义前面的指令，Python在函数运行前，根据它来修改函数代码的行为.</strong></li>
+<li>将数据关联到用户<br><strong>修改模型Topic</strong><br>我们只需将最高层的数据关联到用户，这样更低层的数据将自动关联到用户。<br>例如，在项目“学习笔记”中，应用程序的最高层数据是主题，而所有条目都与特定主题相关联。只要每个主题都归属于特定用户，我们就能确定数据库中每个条目的所有者。<br>对models.py的修改只涉及两行代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from django.contrib.auth.models import User</span><br><span class="line">class Topic(models.Model):</span><br><span class="line">&quot;&quot;&quot;用户要学习的主题&quot;&quot;&quot;</span><br><span class="line">text = models.CharField(max_length=200)</span><br><span class="line">date_added = models.DateTimeField(auto_now_add=True)</span><br><span class="line">owner = models.ForeignKey(User) #建立到模型User的外键关系</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>我们首先导入了django.contrib.auth中的模型User，然后在Topic中添加了字段owner，它建立到模型User的外键关系。</p>
+<p><strong>确定当前有哪些用户</strong><br>在Django shell中查询 各个用户的ID<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from django.contrib.auth.models import User</span><br><span class="line">User.objects.all()</span><br><span class="line">for user in User.objects.all():&apos;</span><br><span class="line">	print(user.username, user.id)</span><br></pre></td></tr></table></figure></p>
+<p><strong>迁移数据库</strong><br>将所有既有主题都关联到管理用户ll_admin，我输入了用户ID值1<br><code>python manage.py makemigrations learning_logs</code><br>执行迁移<br><code>python manage.py migrate</code></p>
+<p><strong>注意</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你可以重置数据库而不是迁移它，但如果这样做，既有的数据都将丢失。一种不错的做法是，学习如何在迁移数据库的同时确保用户数据的完整性。</span><br><span class="line">如果你确实想要一个全新的数据库，可执行命令python manage.py flush，这将重建数据库的结构。</span><br><span class="line">如果你这样做，就必须重新创建超级用户，且原来的所有数据都将丢失。</span><br></pre></td></tr></table></figure></p>
+<p><strong>只允许用户访问自己的主题</strong><br>在views.py中，对函数topics()做如下修改：<br><code>topics = Topic.objects.filter(owner=request.user).order_by(&#39;date_added&#39;)</code><br>用户登录后，request对象将有一个user属性，这个属性存储了有关该用户的信息.<br>代码让Django只从数据库中获取owner属性为当前用户的Topic对象。</p>
+<p><strong>保护用户的主题</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from django.http import HttpResponseRedirect, Http404</span><br><span class="line"># 确认请求的主题属于当前用户</span><br><span class="line"> if topic.owner != request.user:</span><br><span class="line">		raise Http404</span><br></pre></td></tr></table></figure></p>
+<p>服务器上没有请求的资源时，标准的做法是返回404响应.</p>
+<p><strong>保护页面edit_entry</strong><br>同上</p>
+<p><strong>将新主题关联到当前用户</strong><br>创建新主题时，你必须指定其owner字段的值。<br>views中添加下面的代码，将新主题关联到当前用户:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if form.is_valid():</span><br><span class="line"> new_topic = form.save(commit=False)</span><br><span class="line"> new_topic.owner = request.user</span><br><span class="line"> new_topic.save()</span><br></pre></td></tr></table></figure></p>
+<p>先调用form.save(),传递实参commit=False<br>将新主题的owner属性设置为当前用户<br>对刚定义的主题实例调用save(),主题包含所有必不可少的数据，将被成功地保存.</p>
+<p>13.小结<br>使用表单来让用户添加新主题、添加新条目和编辑既有条目<br>实现用户账户<br>用户能够登录和注销<br>使用Django提供的表单UserCreationForm让用户能够创建新账户<br>使用装饰器@login_required禁止未登录的用户访问特定页面<br>使用外键将数据关联到特定用户，还学习了如何执行要求指定默认数据的数据库迁移<br>修改视图函数，让用户只能看到属于他的数据<br>使用方法filter()来获取合适的数据,将请求的数据的所有者同当前登录的用户进行比较</p>
+<h2 id="将请求的数据的所有者同当前登录的用户进行比较"><a href="#将请求的数据的所有者同当前登录的用户进行比较" class="headerlink" title="将请求的数据的所有者同当前登录的用户进行比较"></a>将请求的数据的所有者同当前登录的用户进行比较</h2><h2 id="设置应用程序的样式并对其进行部署"><a href="#设置应用程序的样式并对其进行部署" class="headerlink" title="设置应用程序的样式并对其进行部署"></a>设置应用程序的样式并对其进行部署</h2><p><strong>参考博客</strong><br><code>https://blog.csdn.net/qq_19268039/article/details/83272949</code></p>
+<ol>
+<li><p>概述</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.使用Bootstrap库,为Web应用程序设置样式,使其在任何现代设备上都看起来很专业</span><br><span class="line">2.开发简单的Web应用程序，让它们看起来很漂亮，再将它们部署到服务器</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置项目的样式<br>使用应用程序django-bootstrap4</p>
+</li>
+<li>django-bootstrap4安装<br>使用django-bootstrap4来将Bootstrap继承到项目中</li>
+</ol>
+<ul>
+<li><p>在活动的虚拟环境中:<br><code>pip3 install django-bootstrap4</code></p>
+</li>
+<li><p>在项目中包含应用程序:在settings.py中INSTALLED_APPS中添加代码:<br><code>&#39;bootstrap4&#39;</code></p>
+</li>
+<li><p>让django-bootstrap4包含jQuery(JavaScript库,让你能够使用Bootstrap模板提供的一些交互元素),在settings.py中添加代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># django-bootstrap4的设置</span><br><span class="line">BOOTSTRAP3 = &#123;</span><br><span class="line">    &apos;include_jquery&apos;: True,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这些代码让你无需<em>手工下载jQuery并将其放到正确的地方.</em></p>
+<ol start="4">
+<li>使用Bootstrap来设置项目的样式.<br>Bootstrap基本上就是一个大型的样式设置工具集，它还提供了大量的模板，你可将它们应用于项目以创建独特的总体风格。<br>Static top navbar ,它提供了简单的顶部导航条、页面标题和用于放置页面内容的容器。<br>修改模板base.html，以使用Bootstrap模板</li>
+</ol>
+<ul>
+<li>定义HTML头部<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;% load bootstrap4 %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;zh-cn&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Django入门&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">    &#123;% bootstrap_css %&#125;</span><br><span class="line">    &#123;% bootstrap_javascript %&#125;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>加载django-bootstrap3中的模板标签集<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% load bootstrap3 %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用了django-bootstrap3的一个自定义模板标签，它让Django包含所有的Bootstrap样式文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% bootstrap_css %&#125;</span><br><span class="line">&#123;% bootstrap_javascript %&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>定义导航栏(<nav></nav>)<br>导航栏其实就是一个以<ul>打头的列表<br>其中每个链接都是一个列表项（<li>）</li></ul></p>
+</li>
+<li><p>定义页面的主要部分<br>div是网页的一部分，可用于任何目的，并可通过边框、元素周围的空间（外边距）、内容和边框之间的间距（内边距）、背景色和其他样式规则来设置其样式<br>*DIV是层叠样式表中的定位技术，全称DIVision，即为划分。有时可以称其为图层。 DIV元素是用来为HTML（标准通用标记语言下的一个应用）文档内大块（block-level）的内容提供结构和背景的元素。</p>
+</li>
+<li><p>使用jumbotron 设置主页的样式<br>jumbotron元素是一个大框，相比于页面的其他部分显得鹤立鸡群，你想在其中包含什么东西都可以；它通常用于在主页中呈现项目的简要描述.</p>
+</li>
+<li><p>各个页面应用bootstrap4的样式.</p>
+</li>
+</ul>
+<ol start="5">
+<li>部署“学习笔记”<br>将项目部署到服务器.</li>
+</ol>
+<ul>
+<li>建立Heroku 账户</li>
+</ul>
+<ol start="6">
+<li>小结<br>使用Bootstrap库和应用程序django-bootstrap3赋予应用程序简单而专业的外观。<br>使用Bootstrap意味着无论用户使用哪种设备来访问你的项目，你选择的样式都将实现几乎相同的效果。<br>Bootstrap的模板，并使用模板Static top navbar赋予了“学习笔记”简单的外观。<br>使用jumbotron来突出主页中的消息，还学习了如何给网站的所有网页设置一致的样式。<br>如何将项目部署到Heroku的服务器，让任何人都能够访问它.</li>
+</ol>
+<hr>
+<h2 id="访问设置"><a href="#访问设置" class="headerlink" title="访问设置."></a>访问设置.</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.修改 Django项目中的settings.py中的 ALLOWED_HOSTS 的值为 [*]</span><br><span class="line"># 准许哪些地址访问，* 表示任意地址</span><br><span class="line">ALLOWED_HOSTS = [&apos;*&apos;]</span><br><span class="line"># ALLOWED_HOSTS = [&apos;192.168.1.49&apos;, &apos;localhost&apos;, &apos;127.0.0.1&apos;]</span><br><span class="line">2.使用命令启动服务：</span><br><span class="line">python manage.py runserver 0.0.0.0:8000  </span><br><span class="line">其他的电脑可通过访问启动服务的ip访问项目</span><br></pre></td></tr></table></figure>
+<p>内网访问,需要服务器主机的ip,以及设置的端口.<br>外网访问,需要服务器路由映射,以及域名.<br>80端口需要到信息管理部门进行备份.</p>
+<h2 id="熟悉下Win10下IIS配置、项目发布、添加网站-公司使用IIS发布"><a href="#熟悉下Win10下IIS配置、项目发布、添加网站-公司使用IIS发布" class="headerlink" title="熟悉下Win10下IIS配置、项目发布、添加网站(公司使用IIS发布)"></a><em>熟悉下Win10下IIS配置、项目发布、添加网站(公司使用IIS发布)</em></h2><h2 id="IIS发布"><a href="#IIS发布" class="headerlink" title="IIS发布"></a>IIS发布</h2><ol>
+<li><p>手机端访问电脑文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.控制面板–程序–启用或关闭windows功能.</span><br><span class="line">2.将Internet information service全部选中.</span><br><span class="line">3.控制面板–系统和安全–管理工具,打开管理工具中的—-ISS管理器.</span><br><span class="line">4.网站—点击右键—-添加网络.</span><br><span class="line">5.设置: 网站名称，物理路径,端口,主机名.</span><br><span class="line">6.访问设置:关闭防火墙,打开功能视图下的目录浏览.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Win10专业版防火墙设置白名单的方法步骤</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">控制面板-系统和安全-windows Defender防火墙-高级设置-入站规则-新建规则.</span><br><span class="line">选择【端口】按钮并点击下一步</span><br><span class="line">选择【TCP按钮】，在特定本地端口的位置，输入需要信任的程序端口(例如某游戏的端口为3724).</span><br><span class="line">选择允许连接.</span><br><span class="line">输入任意名称后，点击完成即可.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>网站发布.</p>
+</li>
+</ol>
+<hr>
+<hr>
 <h1 id="外星人入侵：使用Python-开发游戏"><a href="#外星人入侵：使用Python-开发游戏" class="headerlink" title="外星人入侵：使用Python 开发游戏"></a>外星人入侵：使用Python 开发游戏</h1><p>使用Pygame 包来开发一款2D 游戏.</p>
 
       
@@ -649,7 +776,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python-教程/" rel="tag"><i class="fa fa-tag"></i> python,教程</a>
+            <a href="/tags/python3-教程-整理/" rel="tag"><i class="fa fa-tag"></i> python3,教程,整理</a>
           
         </div>
       
@@ -750,7 +877,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -779,7 +906,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -808,7 +937,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -866,7 +999,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#综述"><span class="nav-number">1.</span> <span class="nav-text">综述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据可视化"><span class="nav-number">2.</span> <span class="nav-text">数据可视化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基因研究、天气研究、政治经济分析等众多领域"><span class="nav-number">2.1.</span> <span class="nav-text">基因研究、天气研究、政治经济分析等众多领域.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成数据"><span class="nav-number">2.2.</span> <span class="nav-text">生成数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python可视化包Pygal来生成可缩放的矢量图形文件"><span class="nav-number">2.3.</span> <span class="nav-text">Python可视化包Pygal来生成可缩放的矢量图形文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pygal文档"><span class="nav-number">2.4.</span> <span class="nav-text">Pygal文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#熟悉使用2个库-matplotlib-Pygal"><span class="nav-number">2.5.</span> <span class="nav-text">熟悉使用2个库:matplotlib,Pygal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapt15-总结"><span class="nav-number">2.6.</span> <span class="nav-text">Chapt15 总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Pygal来创建直方图，使用直方图来探索同时掷两个面数不同的骰子的结果"><span class="nav-number">2.7.</span> <span class="nav-text">使用Pygal来创建直方图，使用直方图来探索同时掷两个面数不同的骰子的结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载数据"><span class="nav-number">2.8.</span> <span class="nav-text">下载数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSV文件格式"><span class="nav-number">2.9.</span> <span class="nav-text">.CSV文件格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作世界人口地图：JSON-格式"><span class="nav-number">2.10.</span> <span class="nav-text">制作世界人口地图：JSON 格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大多数在线数据集都可以以这两种格式中的一种或两种下载。学习使用这两种格式为学习使用其他格式的数据做好了准备。"><span class="nav-number">2.11.</span> <span class="nav-text">大多数在线数据集都可以以这两种格式中的一种或两种下载。学习使用这两种格式为学习使用其他格式的数据做好了准备。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用API-应用程序编程接口-Application-Programming-Interface"><span class="nav-number">2.12.</span> <span class="nav-text">使用API(应用程序编程接口,Application Programming Interface)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">2.13.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web-应用程序"><span class="nav-number">3.</span> <span class="nav-text">Web 应用程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用户登录后，就可创建新主题、添加新条目以及阅读既有的条目。"><span class="nav-number">3.1.</span> <span class="nav-text">用户登录后，就可创建新主题、添加新条目以及阅读既有的条目。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建立项目"><span class="nav-number">4.</span> <span class="nav-text">建立项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立项目时，首先需要以规范的方式对项目进行描述，再建立虚拟环境，以便在其中创建项目。"><span class="nav-number">4.1.</span> <span class="nav-text">建立项目时，首先需要以规范的方式对项目进行描述，再建立虚拟环境，以便在其中创建项目。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建项目"><span class="nav-number">4.2.</span> <span class="nav-text">创建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建一个文件-指定项目名称"><span class="nav-number">4.3.</span> <span class="nav-text">新建一个文件,指定项目名称.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立虚拟环境"><span class="nav-number">4.4.</span> <span class="nav-text">建立虚拟环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Django"><span class="nav-number">4.5.</span> <span class="nav-text">安装Django</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#然后Django就安装成功了，在这里默认选择的是最新的django版本，若是想安装指定的版本可将django替换为django-x-x-x-（x为具体的版本号）"><span class="nav-number">4.6.</span> <span class="nav-text">然后Django就安装成功了，在这里默认选择的是最新的django版本，若是想安装指定的版本可将django替换为django==x.x.x （x为具体的版本号）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在Django-中创建项目"><span class="nav-number">4.7.</span> <span class="nav-text">在Django 中创建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建数据库"><span class="nav-number">4.8.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看项目"><span class="nav-number">4.9.</span> <span class="nav-text">查看项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果这个端口也不可用，请不断执行上述命令，并逐渐增大其中的端口号，直到找到可用的端口。"><span class="nav-number">4.10.</span> <span class="nav-text">如果这个端口也不可用，请不断执行上述命令，并逐渐增大其中的端口号，直到找到可用的端口。*</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建应用程序"><span class="nav-number">5.</span> <span class="nav-text">创建应用程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义模型"><span class="nav-number">5.1.</span> <span class="nav-text">定义模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活模型"><span class="nav-number">5.2.</span> <span class="nav-text">激活模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Django-管理网站"><span class="nav-number">5.3.</span> <span class="nav-text">Django 管理网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型Entry"><span class="nav-number">5.4.</span> <span class="nav-text">模型Entry</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Django-shell"><span class="nav-number">5.5.</span> <span class="nav-text">Django shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意-每次修改模型后，你都需要重启shell，这样才能看到修改的效果。要退出shell会话，可按Ctr-D；如果你使用的是Windows系统，应按Ctr-Z，再按回车键。"><span class="nav-number">5.6.</span> <span class="nav-text">注意 每次修改模型后，你都需要重启shell，这样才能看到修改的效果。要退出shell会话，可按Ctr + D；如果你使用的是Windows系统，应按Ctr + Z，再按回车键。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建网页"><span class="nav-number">5.7.</span> <span class="nav-text">创建网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#熟悉下Win10下IIS配置、项目发布、添加网站-公司使用IIS发布"><span class="nav-number">5.8.</span> <span class="nav-text">熟悉下Win10下IIS配置、项目发布、添加网站(公司使用IIS发布)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#外星人入侵：使用Python-开发游戏"><span class="nav-number">6.</span> <span class="nav-text">外星人入侵：使用Python 开发游戏</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#综述"><span class="nav-number">1.</span> <span class="nav-text">综述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据可视化"><span class="nav-number">2.</span> <span class="nav-text">数据可视化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基因研究、天气研究、政治经济分析等众多领域"><span class="nav-number">2.1.</span> <span class="nav-text">基因研究、天气研究、政治经济分析等众多领域.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成数据"><span class="nav-number">2.2.</span> <span class="nav-text">生成数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python可视化包Pygal来生成可缩放的矢量图形文件"><span class="nav-number">2.3.</span> <span class="nav-text">Python可视化包Pygal来生成可缩放的矢量图形文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pygal文档"><span class="nav-number">2.4.</span> <span class="nav-text">Pygal文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#熟悉使用2个库-matplotlib-Pygal"><span class="nav-number">2.5.</span> <span class="nav-text">熟悉使用2个库:matplotlib,Pygal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapt15-总结"><span class="nav-number">2.6.</span> <span class="nav-text">Chapt15 总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Pygal来创建直方图，使用直方图来探索同时掷两个面数不同的骰子的结果"><span class="nav-number">2.7.</span> <span class="nav-text">使用Pygal来创建直方图，使用直方图来探索同时掷两个面数不同的骰子的结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载数据"><span class="nav-number">2.8.</span> <span class="nav-text">下载数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSV文件格式"><span class="nav-number">2.9.</span> <span class="nav-text">.CSV文件格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作世界人口地图：JSON-格式"><span class="nav-number">2.10.</span> <span class="nav-text">制作世界人口地图：JSON 格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大多数在线数据集都可以以这两种格式中的一种或两种下载。学习使用这两种格式为学习使用其他格式的数据做好了准备。"><span class="nav-number">2.11.</span> <span class="nav-text">大多数在线数据集都可以以这两种格式中的一种或两种下载。学习使用这两种格式为学习使用其他格式的数据做好了准备。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用API-应用程序编程接口-Application-Programming-Interface"><span class="nav-number">2.12.</span> <span class="nav-text">使用API(应用程序编程接口,Application Programming Interface)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">2.13.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web-应用程序"><span class="nav-number">3.</span> <span class="nav-text">Web 应用程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用户登录后，就可创建新主题、添加新条目以及阅读既有的条目。"><span class="nav-number">3.1.</span> <span class="nav-text">用户登录后，就可创建新主题、添加新条目以及阅读既有的条目。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建立项目"><span class="nav-number">4.</span> <span class="nav-text">建立项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立项目时，首先需要以规范的方式对项目进行描述，再建立虚拟环境，以便在其中创建项目。"><span class="nav-number">4.1.</span> <span class="nav-text">建立项目时，首先需要以规范的方式对项目进行描述，再建立虚拟环境，以便在其中创建项目。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建项目"><span class="nav-number">4.2.</span> <span class="nav-text">创建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建一个文件-指定项目名称"><span class="nav-number">4.3.</span> <span class="nav-text">新建一个文件,指定项目名称.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立虚拟环境"><span class="nav-number">4.4.</span> <span class="nav-text">建立虚拟环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Django"><span class="nav-number">4.5.</span> <span class="nav-text">安装Django</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#然后Django就安装成功了，在这里默认选择的是最新的django版本，若是想安装指定的版本可将django替换为django-x-x-x-（x为具体的版本号）"><span class="nav-number">4.6.</span> <span class="nav-text">然后Django就安装成功了，在这里默认选择的是最新的django版本，若是想安装指定的版本可将django替换为django==x.x.x （x为具体的版本号）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在Django-中创建项目"><span class="nav-number">4.7.</span> <span class="nav-text">在Django 中创建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建数据库"><span class="nav-number">4.8.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看项目"><span class="nav-number">4.9.</span> <span class="nav-text">查看项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果这个端口也不可用，请不断执行上述命令，并逐渐增大其中的端口号，直到找到可用的端口。"><span class="nav-number">4.10.</span> <span class="nav-text">如果这个端口也不可用，请不断执行上述命令，并逐渐增大其中的端口号，直到找到可用的端口。*</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建应用程序"><span class="nav-number">5.</span> <span class="nav-text">创建应用程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义模型"><span class="nav-number">5.1.</span> <span class="nav-text">定义模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活模型"><span class="nav-number">5.2.</span> <span class="nav-text">激活模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Django-管理网站"><span class="nav-number">5.3.</span> <span class="nav-text">Django 管理网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型Entry"><span class="nav-number">5.4.</span> <span class="nav-text">模型Entry</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Django-shell"><span class="nav-number">5.5.</span> <span class="nav-text">Django shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意-每次修改模型后，你都需要重启shell，这样才能看到修改的效果。要退出shell会话，可按Ctr-D；如果你使用的是Windows系统，应按Ctr-Z，再按回车键。"><span class="nav-number">5.6.</span> <span class="nav-text">注意 每次修改模型后，你都需要重启shell，这样才能看到修改的效果。要退出shell会话，可按Ctr + D；如果你使用的是Windows系统，应按Ctr + Z，再按回车键。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建网页"><span class="nav-number">5.7.</span> <span class="nav-text">创建网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Django小结"><span class="nav-number">5.8.</span> <span class="nav-text">Django小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户账户"><span class="nav-number">5.9.</span> <span class="nav-text">用户账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义URL，编写视图函数和模板，链接到网页。"><span class="nav-number">5.10.</span> <span class="nav-text">定义URL，编写视图函数和模板，链接到网页。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将请求的数据的所有者同当前登录的用户进行比较"><span class="nav-number">5.11.</span> <span class="nav-text">将请求的数据的所有者同当前登录的用户进行比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置应用程序的样式并对其进行部署"><span class="nav-number">5.12.</span> <span class="nav-text">设置应用程序的样式并对其进行部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问设置"><span class="nav-number">5.13.</span> <span class="nav-text">访问设置.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#熟悉下Win10下IIS配置、项目发布、添加网站-公司使用IIS发布"><span class="nav-number">5.14.</span> <span class="nav-text">熟悉下Win10下IIS配置、项目发布、添加网站(公司使用IIS发布)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IIS发布"><span class="nav-number">5.15.</span> <span class="nav-text">IIS发布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#外星人入侵：使用Python-开发游戏"><span class="nav-number">6.</span> <span class="nav-text">外星人入侵：使用Python 开发游戏</span></a></li></ol></div>
             
 
           </div>
@@ -914,7 +1047,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.9k字|</span>
+  <span class="post-count">博客全站共27.4k字|</span>
 <i class="fa fa-user-md"></i>
 	<span id="busuanzi_container_site_uv">本站访客:<span id="busuanzi_value_site_uv"></span>
 </span></div>
