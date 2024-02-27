@@ -7,6 +7,8 @@ tags: ["Blog", "Hugo"]
 summary: "个人博客简易教程"
 ---
 
+## 网站架构
+
 网站架构使用Github pages作为存储服务，并提供Web访问，Hugo作为静态博客框架，PaperMod作为Hugo的主题，并搭配Github Actions进行自动编译与发布。
 
 发布一篇文章的流程是这样的：
@@ -329,7 +331,7 @@ Hugo提供了在不修改`themes/PaperMod/layouts/partials/head.html`的情况�
 
    > 类似于DockerFile的自动部署文件
 
-   ![image-20240227104610953](build-blog-with-hugo-and-github-pages.assets/image-20240227104610953.png)
+   ![image-20240227104610953](/build-blog-with-hugo-and-github-pages.assets/image-20240227104610953.png)
 
    
 
@@ -428,15 +430,15 @@ Hugo提供了在不修改`themes/PaperMod/layouts/partials/head.html`的情况�
 
 6. 在Github仓库页面，点击 **Actions** ，可以看到工作流的状态
 
-   ![image-20240227104649277](build-blog-with-hugo-and-github-pages.assets/image-20240227104649277.png)
+   ![image-20240227104649277](/build-blog-with-hugo-and-github-pages.assets/image-20240227104649277.png)
 
 7. 当 GitHub 完成站点的构建和部署后，状态指示器的颜色将变为绿色
 
-   ![image-20240227104705030](build-blog-with-hugo-and-github-pages.assets/image-20240227104705030.png)
+   ![image-20240227104705030](/build-blog-with-hugo-and-github-pages.assets/image-20240227104705030.png)
 
 8. 单击提交消息，如上所示。你会看到这个
 
-   ![image-20240227104746304](build-blog-with-hugo-and-github-pages.assets/image-20240227104746304.png)
+   ![image-20240227104746304](/build-blog-with-hugo-and-github-pages.assets/image-20240227104746304.png)
 
 9. 在`deploy`步骤下，您将看到指向您的实时站点的链接。
 
