@@ -7,7 +7,7 @@ tags: ["Blog", "Hugo"]
 summary: "hugo blog post test"
 ---
 
-# Introduction
+## Introduction
 
 This is **bold** text, and this is *emphasized* text.
 
