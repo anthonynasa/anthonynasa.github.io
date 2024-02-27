@@ -1,7 +1,7 @@
 ---
-tilte: "使用Github Pages+Hugo+PaperMod搭建博客"
+title: "使用Github Pages+Hugo+PaperMod搭建博客"
 date: 2024-02-27T10:31:51+08:00
-dfatf: false
+draft: false
 categories: ["Blog"]
 tags: ["Blog", "Hugo"]
 summary: "个人博客简易教程"
@@ -449,6 +449,16 @@ Hugo提供了在不修改`themes/PaperMod/layouts/partials/head.html`的情况�
     git commit -m "xxx"
     git push
     ```
+
+## 关于图片引用的几个方案
+
+1. 引用图床
+
+2. 在`static`目录下存放图片,引用时,通过如下方式引用 (映射`static`目录)
+
+   ```mark
+   ![文件名](/目录/文件名.后缀) 
+   ```
 
 ## 总结
 
